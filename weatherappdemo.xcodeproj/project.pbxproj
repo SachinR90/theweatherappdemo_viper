@@ -30,6 +30,7 @@
 		F1CBD94523D5900F008D8AF4 /* weatherappdemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1CBD94323D5900F008D8AF4 /* weatherappdemo.xcdatamodeld */; };
 		F1CBD94723D59010008D8AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1CBD94623D59010008D8AF4 /* Assets.xcassets */; };
 		F1CBD94A23D59010008D8AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CBD94823D59010008D8AF4 /* LaunchScreen.storyboard */; };
+		F1D406B823D7317300590C19 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F1D406B723D7317300590C19 /* .gitignore */; };
 		F1D7BD1823D61F2200917562 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7BD1723D61F2200917562 /* UIImageViewExtensions.swift */; };
 		F1D7BD1B23D622F400917562 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7BD1923D622F400917562 /* HomeCollectionViewCell.swift */; };
 		F1D7BD1C23D622F400917562 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1D7BD1A23D622F400917562 /* HomeCollectionViewCell.xib */; };
@@ -69,6 +70,7 @@
 		F1CBD94623D59010008D8AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1CBD94923D59010008D8AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1CBD94B23D59010008D8AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1D406B723D7317300590C19 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F1D7BD1723D61F2200917562 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		F1D7BD1923D622F400917562 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1D7BD1A23D622F400917562 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		F1CBD92E23D5900F008D8AF4 = {
 			isa = PBXGroup;
 			children = (
+				F1D406B723D7317300590C19 /* .gitignore */,
 				F1CBD93923D5900F008D8AF4 /* weatherappdemo */,
 				F1CBD93823D5900F008D8AF4 /* Products */,
 				1B2B1D9B32686A18BC697C61 /* Pods */,
@@ -333,6 +336,7 @@
 				F1CBD94723D59010008D8AF4 /* Assets.xcassets in Resources */,
 				F1CBD94223D5900F008D8AF4 /* Main.storyboard in Resources */,
 				F13F96BD23D6FB7800153ED0 /* CityDetailCollectionViewCell.xib in Resources */,
+				F1D406B823D7317300590C19 /* .gitignore in Resources */,
 				F1D7BD1C23D622F400917562 /* HomeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
