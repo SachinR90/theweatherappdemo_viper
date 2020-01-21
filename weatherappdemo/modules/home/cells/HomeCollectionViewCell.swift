@@ -17,9 +17,9 @@ class HomeCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         icon.image = nil
-        cityName.text = ""
-        minLabel.text = ""
-        maxLabel.text = ""
+        cityName.text = " "
+        minLabel.text = " "
+        maxLabel.text = " "
     }
     
     override func awakeFromNib() {
@@ -35,16 +35,16 @@ class HomeCollectionViewCell: UICollectionViewCell {
         if let minTemp = detail.main?.minTemp {
             minLabel.text = "\(minTemp) ℃"
         }else{
-            minLabel.text = ""
+            minLabel.text = " "
         }
         if let maxTemp = detail.main?.maxTemp {
             maxLabel.text = " \(maxTemp) ℃"
         }else{
-            maxLabel.text = ""
+            maxLabel.text = " "
         }
         
         if (maxLabel.text ?? "").isEmpty || (minLabel.text ?? "").isEmpty{
-            seprator.text = ""
+            seprator.text = " "
         }else{
             seprator.text = "/"
         }

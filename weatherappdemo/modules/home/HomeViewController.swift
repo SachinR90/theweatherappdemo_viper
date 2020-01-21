@@ -21,8 +21,7 @@ class HomeViewController: BaseViewController {
     var locationManager:CLLocationManager!
     var cityCountryCode:[String] = ["Pune,in","San Francisco,us"]
     
-    var estimateWidth = 160.0
-    var cellMarginSize = 16.0
+    var cellMarginSize:CGFloat = 16.0
     
     @IBOutlet weak var weatherCollectionView: UICollectionView!
     
@@ -37,10 +36,13 @@ class HomeViewController: BaseViewController {
         self.weatherCollectionView.delegate = self
         self.weatherCollectionView.dataSource = self
         self.weatherCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCell")
-        let layout = weatherCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
-        layout.minimumLineSpacing = CGFloat(self.cellMarginSize)
-        weatherCollectionView.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        let widthSize = (self.view.frame.width-20)/(isDevicePhone ? 2 : 3)
+        layout.itemSize = CGSize(width: widthSize, height: widthSize)
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        self.weatherCollectionView!.collectionViewLayout = layout
     }
     func setupLocationManager(){
         locationManager = CLLocationManager()
@@ -88,21 +90,6 @@ extension HomeViewController:UICollectionViewDataSource, UICollectionViewDelegat
             return cell
         }
         return UICollectionViewCell()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = self.calculateWidth()
-        return CGSize(width: width, height: width)
-    }
-    
-    func calculateWidth() -> CGFloat {
-        let estimatedWidth = CGFloat(estimateWidth)
-        let cellCount = floor(CGFloat(self.view.frame.size.width / estimatedWidth))
-        
-        let margin = CGFloat(cellMarginSize * 2)
-        let width = (self.view.frame.size.width - CGFloat(cellMarginSize) * (cellCount - 1) - margin) / cellCount
-        
-        return width
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
